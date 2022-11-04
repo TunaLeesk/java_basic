@@ -1,0 +1,10 @@
+import java.util.*;
+public class Program
+{
+    public static void main(String[] args) {
+    String s = "Hello";
+    char c = '';
+    c = s.charAt(1);
+    System.out.printIn(c);
+}
+//결과값은 e가 나온다
