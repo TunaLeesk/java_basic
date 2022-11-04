@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Program
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int num = input.nextInt();
+        double totalprice = 0;
+        if(num==1){
+        totalprice += num*5.00*1.07;
+            System.out.printf("%.2f",totalprice);
+        }
+        else{
+            totalprice += num*4.50*1.07;
+            System.out.printf("%.2f",totalprice);
+        }
+    }
+}
