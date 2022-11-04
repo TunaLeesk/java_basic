@@ -1,0 +1,23 @@
+import java.util.Scanner;
+public class Program
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String noises = input.nextLine();
+        String[] noise = noises.split("\\s");
+        for(String s:noise){
+            if(s.equals("Ssss")){
+                System.out.print("Snake ");
+            }
+            else if(s.equals("Rawr")){
+                System.out.print("Tiger ");
+            }
+            else if(s.equals("Grr")){
+                System.out.print("Lion ");
+            }
+            else if(s.equals("Chirp")){
+                System.out.print("Bird ");
+            }
+        }
+    }
+}
