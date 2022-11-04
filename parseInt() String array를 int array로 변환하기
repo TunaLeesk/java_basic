@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Program
+{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String a = input.next();
+        String b = input.next();
+        String[] numA = a.split(",");
+        String[] numB = b.split(",");
+        int [] areaA = new int[numA.length];
+        
+        for(int i=0;i<numA.length;i++){
+            areaA[i] = Integer.parseInt(numA[i]);
+        }
+        int [] areaB = new int[numB.length];
+        
+        for(int i=0;i<numB.length;i++){
+            areaB[i] = Integer.parseInt(numB[i]);
+        }
+        if(areaA[0]*areaA[1]>areaB[0]*areaB[1]){
+            System.out.println("Apartment A");
+        }
+        else{
+            System.out.println("Apartment B");
+        }
+    }
+    
+}
