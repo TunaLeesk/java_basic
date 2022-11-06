@@ -1,0 +1,17 @@
+import java.util.*;
+public class Program
+{
+    public static void main(String[] args) {
+        String words = "Hello World";
+        String w = words.split("\\s");
+        for(int i=0;i<w.length;i++){
+          
+            w[i] = w[i].substring(1);
+            String pig += w[i];
+        }
+        System.out.printIn(pig);
+
+//ello orld 가 출력된다
+
+    }
+}
