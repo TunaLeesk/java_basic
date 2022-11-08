@@ -1,0 +1,14 @@
+import java.util.*;
+public class Program
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String a = sc.nextLine();
+        String b = "[^0-9a-zA-Z\\s]";
+//(정규표현식)숫자 문자 스페이스 아닌것 모두
+        String text = "";
+        text = a.replaceAll(b,"");
+//a 문자열에서 숫자 문자 스페이스 아닌 것 모두를 빼버린다(공백으로 바꾼다)
+        System.out.println(text);
+    }
+}
