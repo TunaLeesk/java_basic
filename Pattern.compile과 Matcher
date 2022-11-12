@@ -1,0 +1,21 @@
+import java.util.*;
+import java.util.regex.*;
+public class Program
+{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        Pattern link = Pattern.compile("youtube.com");
+        Pattern shortened = Pattern.compile("youtu.be");
+        Matcher l = link.matcher(input);
+        Matcher s = shortened.matcher(input);
+        String id = "";
+        if(l.find()){
+        id = input.substring(32);
+        }
+        else if(s.find()){
+            id = input.substring(17);
+        }
+    System.out.println(id);
+    }
+}
