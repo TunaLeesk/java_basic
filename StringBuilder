@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class Program
+{
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);    
+        String s, r = "Trash";
+        StringBuilder ss = new StringBuilder();
+        for (int i=0; i<4; i++) {
+            s = sc.nextLine(); 
+            ss.setLength(0); 
+//StringBuilder 초기화방법. 반복문마다 새로운 StringBuilder만드는것보다 낫다.
+
+            ss.append(s);
+//StringBuilder이름.append(대상)으로 이어붙인다
+
+            if ( s.equals(ss.reverse().toString()) ) {
+//출력시에는 toString()울 붙여야 한다.
+
+                r = "Open";
+                break;
+            }
+        }
+        System.out.println(r);
+        
+    }
+}
