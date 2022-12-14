@@ -1,0 +1,19 @@
+import java.util.regex.Matcher; 
+import java.util.regex.Pattern; 
+
+public class RegExpr {
+
+ public static void main(String[] args) {
+ String original = 
+"You talk about life and talk about death everything between,\n" + "like life is nothing.";
+ Pattern pattern = Pattern.compile("life"); 
+ Matcher matcher = pattern.matcher(original); 
+ StringBuffer sb = new StringBuffer(); 
+while (matcher.find()) {
+  matcher.appendReplacement(sb, matcher.group().toUpperCase()); 
+} 
+ matcher.appendTail(sb); 
+ System.out.println(sb); } 
+
+}
+
