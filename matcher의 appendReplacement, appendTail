@@ -7,13 +7,14 @@ public class RegExpr {
  String original = 
 "You talk about life and talk about death everything between,\n" + "like life is nothing.";
  Pattern pattern = Pattern.compile("life"); 
- Matcher matcher = pattern.matcher(original); 
+ Matcher m = pattern.matcher(original); 
  StringBuffer sb = new StringBuffer(); 
-while (matcher.find()) {
-  matcher.appendReplacement(sb, matcher.group().toUpperCase()); 
+while (m.find()) {
+  m.appendReplacement(sb,m.group().toUpperCase()); 
 } 
- matcher.appendTail(sb); 
- System.out.println(sb); } 
+ m.appendTail(sb); 
+ System.out.println(sb); 
+} 
 
 }
 
